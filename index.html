@@ -49,10 +49,6 @@
         }  
         /* Estilos para pantallas pequeñas */  
         @media (max-width: 768px) {  
-            .logo img {
-            max-width: 50%;
-            height: auto;
-            }
             nav ul {  
                 flex-direction: column;  
                 display: none;  
@@ -68,7 +64,7 @@
             }  
             nav ul li {  
                 margin: 10px 0;  
-            } 
+            }  
         }  
         header {  
             background-color: #F5F5DC;  
@@ -89,6 +85,14 @@
         .logo img {  
             max-width: 600px;  
             height: auto;  
+        }  
+        /* Ajuste del tamaño del logo en pantallas pequeñas */  
+        @media (max-width: 768px) {  
+            .logo img {  
+                max-width: 300px; /* Tamaño máximo específico para pantallas pequeñas */  
+                width: 90%;      /* Ocupar un 90% del ancho del contenedor si es más pequeño */  
+                height: auto;    /* Mantener proporción */  
+            }  
         }  
         .container {  
             max-width: 800px;  
@@ -181,3 +185,4 @@
     </footer>  
 </body>  
 </html>
+
