@@ -14,14 +14,26 @@
         nav {  
             background-color: #333;  
             color: white;  
-            padding: 10px 0;  
+            position: sticky;  
+            top: 0;  
+            z-index: 1000;  
+        }  
+        nav .menu-container {  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+            padding: 10px 20px;  
+        }  
+        nav .menu-container .menu-toggle {  
+            display: none;  
+            font-size: 24px;  
+            cursor: pointer;  
         }  
         nav ul {  
             list-style: none;  
+            display: flex;  
             padding: 0;  
             margin: 0;  
-            display: flex;  
-            justify-content: center;  
         }  
         nav ul li {  
             margin: 0 15px;  
@@ -33,6 +45,31 @@
         }  
         nav ul li a:hover {  
             color: #af4c86;  
+        }  
+        /* Menú desplegable para pantallas pequeñas */  
+        @media (max-width: 768px) {  
+            nav .menu-container .menu-toggle {  
+                display: block;  
+            }  
+            nav ul {  
+                display: none;  
+                flex-direction: column;  
+                background-color: #333;  
+                position: absolute;  
+                top: 60px;  
+                width: 100%;  
+                left: 0;  
+                padding: 0;  
+                margin: 0;  
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+            }  
+            nav ul.active {  
+                display: flex;  
+            }  
+            nav ul li {  
+                text-align: center;  
+                margin: 10px 0;  
+            }  
         }  
         header {  
             background-color: #F5F5DC;  
@@ -53,7 +90,7 @@
             background-color: white;  
             border-radius: 8px;  
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
-            flex-wrap: wrap; /* Permite que los elementos se acomoden en pantallas pequeñas */  
+            flex-wrap: wrap;  
         }  
         .text {  
             flex: 1;  
@@ -88,10 +125,10 @@
         /* Ajustes para pantallas pequeñas */  
         @media (max-width: 768px) {  
             header h1 {  
-                font-size: 30px; /* Reducir el tamaño del encabezado en móviles */  
+                font-size: 30px;  
             }  
             .container {  
-                flex-direction: column; /* Cambiar diseño a una sola columna en móviles */  
+                flex-direction: column;  
                 padding: 10px;  
             }  
             .text {  
@@ -102,21 +139,31 @@
                 font-size: 28px;  
             }  
             .image img {  
-                max-width: 90%; /* Ajustar el tamaño de la imagen en móviles */  
+                max-width: 90%;  
             }  
         }  
     </style>  
+    <script>  
+        // Script para mostrar/ocultar el menú en pantallas pequeñas  
+        function toggleMenu() {  
+            const menu = document.querySelector("nav ul");  
+            menu.classList.toggle("active");  
+        }  
+    </script>  
 </head>  
 <body>  
     <nav>  
-        <ul>  
-            <li><a href="index.html">Inicio</a></li>  
-            <li><a href="quienes-somos.html">Quiénes Somos</a></li>  
-            <li><a href="mision-vision.html">Misión y Visión</a></li>  
-            <li><a href="problematica-solucion.html">Problemáticas y Solución</a></li>  
-            <li><a href="educate.html">Edúcate con Nosotros</a></li>  
-            <li><a href="contacto.html">Contacto</a></li>  
-        </ul>  
+        <div class="menu-container">  
+            <span class="menu-toggle" onclick="toggleMenu()">☰</span>  
+            <ul>  
+                <li><a href="index.html">Inicio</a></li>  
+                <li><a href="quienes-somos.html">Quiénes Somos</a></li>  
+                <li><a href="mision-vision.html">Misión y Visión</a></li>  
+                <li><a href="problematica-solucion.html">Problemáticas y Solución</a></li>  
+                <li><a href="educate.html">Edúcate con Nosotros</a></li>  
+                <li><a href="contacto.html">Contacto</a></li>  
+            </ul>  
+        </div>  
     </nav>  
     <header>  
         <h1>¿Quiénes Somos?</h1>  
