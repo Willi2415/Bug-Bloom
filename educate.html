@@ -3,7 +3,7 @@
 <head>  
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Bug Bloom - Edúcate con Nosotros</title>  
+    <title>Bug Bloom - Contacto</title>  
     <style>  
         body {  
             font-family: 'Arial', sans-serif;  
@@ -36,7 +36,7 @@
             transition: color 0.3s;  
         }  
         nav ul li a:hover {  
-            color: #333;   
+            color: #F5F5DC;  
         }  
         nav .menu-toggle {  
             display: none;  
@@ -83,7 +83,25 @@
             background-color: white;  
             border-radius: 8px;  
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  
-            text-align: left;  
+            text-align: center;  
+        }  
+        .social-media {  
+            display: flex;  
+            justify-content: center;  
+            margin: 30px 0;  
+        }  
+        .social-media a {  
+            margin: 0 15px;  
+            display: inline-block;  
+        }  
+        .social-media img {  
+            width: 50px;  
+            height: 50px;  
+            transition: transform 0.3s, box-shadow 0.3s;  
+        }  
+        .social-media img:hover {  
+            transform: scale(1.1);  
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);  
         }  
         footer {  
             background-color: #333;  
@@ -91,27 +109,19 @@
             text-align: center;  
             padding: 20px 0;  
         }  
-        h2 {  
-            color: #333;  
-        }  
-        .disease {  
-            margin-bottom: 20px;  
-        }  
-        .video-container {  
-            display: flex;  
-            justify-content: center;  
+        .vision {  
+            font-size: 20px;  
+            font-family: Arial, sans-serif;  
             margin: 20px 0;  
         }  
-        .image-container {  
-            display: flex;  
-            justify-content: center;  
-            margin: 20px 0;  
+        .title-primary {  
+            font-family: 'Baskerville', serif;  
+            font-weight: bold;  
+            font-size: 50px;  
         }  
-        .image-container img {  
-            margin: 0 10px;  
-            max-width: 100%;  
-            height: auto;  
-            border-radius: 8px;  
+        .title-secondary {  
+            font-family: Georgia, serif;  
+            font-size: 35px;  
         }  
     </style>  
     <script>  
@@ -127,63 +137,37 @@
         <div class="menu-container">  
             <span class="menu-toggle" onclick="toggleMenu()">☰ Menú</span>  
             <ul>  
-            <li><a href="index.html">Inicio</a></li>  
-            <li><a href="quienes-somos.html">Quiénes Somos</a></li>  
-            <li><a href="mision-vision.html">Misión y Visión</a></li>  
-            <li><a href="problematica-solucion.html">Problemáticas y Solución</a></li>  
-            <li><a href="educate.html">Edúcate con Nosotros</a></li>  
-            <li><a href="contacto.html">Contacto</a></li>  
-        </ul>  
+                <li><a href="index.html">Inicio</a></li>  
+                <li><a href="quienes-somos.html">Quiénes Somos</a></li>  
+                <li><a href="mision-vision.html">Misión y Visión</a></li>  
+                <li><a href="problematica-solucion.html">Problemáticas y Solución</a></li>  
+                <li><a href="educate.html">Edúcate con Nosotros</a></li>  
+                <li><a href="contacto.html">Contacto</a></li>  
+            </ul>  
+        </div>  
     </nav>  
     <header>  
-        <h1>Edúcate con Nosotros</h1>  
-        <h2>Conoce sobre la Aromaterapia y sus Beneficios además de las <br> Enfermedades Transmitidas por el Zancudo</h2>  
+        <h1 class="title-primary">Contacto</h1>  
+        <h2 class="title-secondary">Conéctate con Nosotros</h2>  
     </header>  
     <div class="container">  
-        <h2>Aromaterapia y Beneficios</h2>  
-        <p>En Bug Bloom, no solo nos enfocamos en ofrecer repelentes naturales, sino que también promovemos el bienestar a través de la aromaterapia. Nuestros productos están enriquecidos con aceites esenciales que no solo son eficaces contra los mosquitos, sino que también aportan beneficios terapéuticos.</p>  
-        <h3>Aromaterapia:</h3>  
-        <ul>  
-            <li><strong>Floral:</strong> Manzanilla, conocida por sus propiedades relajantes y calmantes.</li>  
-            <li><strong>Tropical:</strong> Coco y piña, que evocan sensaciones de frescura y alegría, transportándote a un ambiente tropical.</li>  
-            <li><strong>Ancestral:</strong> Canela y clavo, que no solo ofrecen un aroma cálido y acogedor, sino que también tienen propiedades antimicrobianas.</li>  
-        </ul>  
-        <p>Al elegir Bug Bloom, no solo te proteges de los mosquitos, sino que también nutres tu piel y disfrutas de una experiencia sensorial única.</p>  
-        <div class="video-container">  
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/eEwiddKVUD0?si=mDvZxmvRADezn2Tt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+        <p class="vision">  
+            Para más información o consultas, no dudes en contactarnos a través de nuestras redes sociales.  
+        </p>  
+        <div class="social-media">  
+            <a href="https://www.facebook.com/profile.php?id=61569029396703" target="_blank">  
+                <img src="face.png" alt="Facebook">  
+            </a>  
+            <a href="https://www.instagram.com/bugbloom_sullanapiura?igsh=ZHZoOTBzdzVnZ2Rh" target="_blank">  
+                <img src="insta.png" alt="Instagram">  
+            </a>  
+            <a href="https://www.tiktok.com/@bug.bloom.sullana?_t=8rRhKgUeRzc&_r=1" target="_blank">  
+                <img src="tiktok.png" alt="TikTok">  
+            </a>
+            <a href="https://wa.me/qr/5WRGRXQQCVYUP1" target="_blank">  
+                <img src="wha.png" alt="TikTok">  
+            </a> 
         </div>  
-    </div>  
-    <div class="container">  
-        <h2>Enfermedades causadas por el Zancudo</h2>  
-        <p>Los zancudos son portadores de diversas enfermedades que pueden afectar gravemente la salud humana. Aquí te presentamos algunas de las más comunes:</p>  
-        <div class="disease">  
-            <h3>Dengue</h3>  
-            <p>El dengue es una enfermedad viral transmitida por el mosquito Aedes aegypti. Los síntomas incluyen fiebre alta, dolor de cabeza, dolor detrás de los ojos, y dolores musculares y articulares.</p>    
-        </div>  
-        <div class="disease">  
-            <h3>Chikungunya</h3>  
-            <p>Transmitida por el mismo mosquito, esta enfermedad provoca fiebre y severo dolor en las articulaciones, que puede durar meses o incluso años.</p>  
-        </div>  
-        <div class="disease">  
-            <h3>Zika</h3>  
-            <p>El virus Zika causa síntomas similares al dengue, pero puede llevar a complicaciones en el embarazo, incluyendo malformaciones congénitas.</p>  
-        </div>  
-        <div class="disease">  
-            <h3>Fiebre Amarilla</h3>  
-            <p>Esta enfermedad es transmitida por mosquitos infectados y puede ser mortal. La vacunación es clave para la prevención.</p>  
-        </div>  
-        <div class="disease">  
-            <h3>Malaria</h3>  
-            <p>Aunque transmitida por otros tipos de mosquitos, es fundamental enseñar sobre esta enfermedad que causa fiebre alta y puede ser fatal si no se trata a tiempo.</p>  
-        </div>  
-        <div class="image-container">  
-            <img src="zancu.gif" alt="Síntomas del dengue" width="300">  
-            <img src="repe.jpg" alt="Mosquito Aedes aegypti" width="300">  
-        </div>  
-        <p>En Bug Bloom, entendemos la importancia de protegerte a ti y a tu familia de las enfermedades transmitidas por los mosquitos. Por eso, hemos desarrollado repelentes naturales que no solo son efectivos, sino que también cuidan tu piel con ingredientes ecológicos y seguros. Al elegir nuestros productos, no solo te proteges de los mosquitos, sino que también contribuyes a un entorno más saludable y sostenible.</p>  
-        <div class="disease">  
-            <h3 style="text-align: center;">¡Únete a nosotros en la lucha contra los mosquitos y disfruta de la naturaleza sin preocupaciones!</h3>  
-        </div>
     </div>  
     <footer>  
         <p>© 2024 Bug Bloom. Todos los derechos reservados.</p>  
