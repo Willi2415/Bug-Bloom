@@ -1,0 +1,183 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Bug Bloom - Inicio</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            margin: 0;  
+            padding: 0;  
+        }  
+        nav {  
+            background-color: #333;  
+            color: white;  
+            position: sticky;  
+            top: 0;  
+            z-index: 1000;  
+        }  
+        nav .menu-toggle {  
+            display: none;  
+            background-color: #333;  
+            color: white;  
+            border: none;  
+            padding: 10px;  
+            font-size: 18px;  
+            cursor: pointer;  
+            width: 100%;  
+            text-align: left;  
+        }  
+        nav ul {  
+            list-style: none;  
+            padding: 0;  
+            margin: 0;  
+            display: flex;  
+            justify-content: center;  
+            flex-wrap: wrap;  
+        }  
+        nav ul li {  
+            margin: 0 15px;  
+        }  
+        nav ul li a {  
+            text-decoration: none;  
+            color: white;  
+            font-weight: bold;  
+        }  
+        nav ul li a:hover {  
+            color: #af4c86;  
+        }  
+        /* Estilos para pantallas pequeñas */  
+        @media (max-width: 768px) {  
+            nav ul {  
+                flex-direction: column;  
+                display: none;  
+                text-align: left;  
+                background-color: #333;  
+                padding: 10px 0;  
+            }  
+            nav ul.active {  
+                display: block;  
+            }  
+            nav .menu-toggle {  
+                display: block;  
+            }  
+            nav ul li {  
+                margin: 10px 0;  
+            } 
+            .logo img {
+        max-width: 600px;
+        height: auto;
+            }
+        }  
+        header {  
+            background-color: #F5F5DC;  
+            color: black;  
+            text-align: center;  
+            padding: 20px 20px;  
+        }  
+        header h1 {  
+            font-size: 3em;  
+        }  
+        header p {  
+            font-size: 1.5em;  
+        }  
+        .logo {  
+            text-align: center;  
+            margin: 20px 0;  
+        }  
+        .logo img {  
+            max-width: 600px;  
+            height: auto;  
+        }  
+        .container {  
+            max-width: 800px;  
+            padding: 20px;  
+            margin: 20px auto;  
+            background-color: white;  
+            border-radius: 8px;  
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  
+            text-align: center;  
+        }  
+        .products {  
+            margin: 40px 0;  
+            text-align: center;  
+        }  
+        .products img {  
+            max-width: 200px;  
+            height: auto;  
+            margin: 0 10px;  
+            border-radius: 8px;  
+        }  
+        footer {  
+            background-color: #333;  
+            color: white;  
+            text-align: center;  
+            padding: 20px 0;  
+        }   
+        .vision {  
+            font-size: 20px;  
+            font-family: Arial, sans-serif;  
+        }  
+        .h1 {  
+            font-family: 'Baskerville', serif;  
+            font-weight: bold;  
+            font-size: 50px;  
+        }  
+        .h2 {  
+            font-family: Georgia, serif;  
+            font-size: 35px;  
+        }  
+    </style>  
+    <script>  
+        function toggleMenu() {  
+            const menu = document.querySelector("nav ul");  
+            menu.classList.toggle("active");  
+        }  
+    </script>  
+</head>  
+<body>  
+    <nav>  
+        <button class="menu-toggle" onclick="toggleMenu()">☰ Menú</button>  
+        <ul>  
+            <li><a href="index.html">Inicio</a></li>  
+            <li><a href="quienes-somos.html">Quiénes Somos</a></li>  
+            <li><a href="mision-vision.html">Misión y Visión</a></li>  
+            <li><a href="problematica-solucion.html">Problemáticas y Solución</a></li>  
+            <li><a href="educate.html">Edúcate con Nosotros</a></li>  
+            <li><a href="contacto.html">Contacto</a></li>  
+        </ul>  
+    </nav>  
+
+    <header>  
+        <h1 class="h1">Bug Bloom</h1>  
+        <p class="h2">A los mosquitos les hace ¡Boom!</p>  
+    </header>  
+ 
+    <div class="logo">  
+        <img src="Boom.png" alt="Logo de Bug Bloom">  
+    </div>  
+ 
+    <div class="container">  
+        <p class="vision">Bienvenido a Bug Bloom, tu solución natural contra los mosquitos. Explora nuestras secciones para saber más sobre nosotros.</p>  
+    </div>  
+ 
+    <div class="products">  
+        <h2 style="font-family: 'Baskerville', serif; font-size: 100;">Nuestros Productos</h2>  
+        <img src="1.jpg" alt="Producto 1">  
+        <img src="2.jpg" alt="Producto 2">  
+        <img src="3.jpg" alt="Producto 3">  
+        <img src="4.jpg" alt="Producto 4">  
+        <img src="5.jpg" alt="Producto 5"><br>  
+        <img src="6.jpg" alt="Producto 6">  
+        <img src="7.jpg" alt="Producto 7">  
+        <img src="8.jpg" alt="Producto 8">  
+        <img src="9.jpg" alt="Producto 9">  
+        <img src="10.jpg" alt="Producto 10">  
+    </div>  
+
+    <footer>  
+        <p>© 2024 Bug Bloom. Todos los derechos reservados.</p>  
+    </footer>  
+</body>  
+</html>
