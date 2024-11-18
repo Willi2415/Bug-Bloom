@@ -18,10 +18,10 @@
         }  
         nav ul {  
             list-style: none;  
-            display: flex;  
-            justify-content: center;  
             padding: 0;  
             margin: 0;  
+            display: flex;  
+            justify-content: center;  
         }  
         nav ul li {  
             margin: 0 15px;  
@@ -35,7 +35,7 @@
             color: #af4c86;  
         }  
         header {  
-            background-color: #F5F5DC; /* Cambiando el color de fondo del encabezado */  
+            background-color: #F5F5DC;  
             text-align: center;  
             padding: 20px;  
         }  
@@ -52,7 +52,8 @@
             padding: 20px;  
             background-color: white;  
             border-radius: 8px;  
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);  
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+            flex-wrap: wrap; /* Permite que los elementos se acomoden en pantallas pequeñas */  
         }  
         .text {  
             flex: 1;  
@@ -84,6 +85,26 @@
             font-family: Georgia, serif;  
             font-size: 35px;  
         }  
+        /* Ajustes para pantallas pequeñas */  
+        @media (max-width: 768px) {  
+            header h1 {  
+                font-size: 30px; /* Reducir el tamaño del encabezado en móviles */  
+            }  
+            .container {  
+                flex-direction: column; /* Cambiar diseño a una sola columna en móviles */  
+                padding: 10px;  
+            }  
+            .text {  
+                font-size: 18px;  
+                padding: 10px;  
+            }  
+            .h2 {  
+                font-size: 28px;  
+            }  
+            .image img {  
+                max-width: 90%; /* Ajustar el tamaño de la imagen en móviles */  
+            }  
+        }  
     </style>  
 </head>  
 <body>  
@@ -92,7 +113,7 @@
             <li><a href="index.html">Inicio</a></li>  
             <li><a href="quienes-somos.html">Quiénes Somos</a></li>  
             <li><a href="mision-vision.html">Misión y Visión</a></li>  
-            <li><a href="problematica-solucion.html">Problemáticas y Solución</a></li>
+            <li><a href="problematica-solucion.html">Problemáticas y Solución</a></li>  
             <li><a href="educate.html">Edúcate con Nosotros</a></li>  
             <li><a href="contacto.html">Contacto</a></li>  
         </ul>  
