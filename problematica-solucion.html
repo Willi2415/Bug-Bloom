@@ -14,12 +14,24 @@
         nav {  
             background-color: #333;  
             color: white;  
-            padding: 10px 0;  
+            position: sticky;  
+            top: 0;  
+            z-index: 1000;  
+        }  
+        nav .menu-container {  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+            padding: 10px 20px;  
+        }  
+        nav .menu-container .menu-toggle {  
+            display: none;  
+            font-size: 24px;  
+            cursor: pointer;  
         }  
         nav ul {  
             list-style: none;  
             display: flex;  
-            justify-content: center;  
             padding: 0;  
             margin: 0;  
         }  
@@ -34,10 +46,46 @@
         nav ul li a:hover {  
             color: #af4c86;  
         }  
+        /* Menú desplegable en pantallas pequeñas */  
+        @media (max-width: 768px) {  
+            nav .menu-container .menu-toggle {  
+                display: block;  
+            }  
+            nav ul {  
+                display: none;  
+                flex-direction: column;  
+                background-color: #333;  
+                position: absolute;  
+                top: 60px;  
+                width: 100%;  
+                left: 0;  
+                padding: 0;  
+                margin: 0;  
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+            }  
+            nav ul.active {  
+                display: flex;  
+            }  
+            nav ul li {  
+                text-align: center;  
+                margin: 10px 0;  
+            }  
+        }  
         header {  
-            background-color: #F5F5DC;
+            background-color: #F5F5DC;  
             text-align: center;  
             padding: 20px;  
+        }  
+        header h1 {  
+            font-family: 'Baskerville', serif;  
+            font-weight: bold;  
+            font-size: 50px;  
+            margin: 0;  
+        }  
+        header h2 {  
+            font-family: Georgia, serif;  
+            font-size: 35px;  
+            margin: 0;  
         }  
         .container {  
             max-width: 1200px;  
@@ -55,6 +103,7 @@
             border: 2px solid #cccccc;  
             border-radius: 8px;  
             padding: 20px;  
+            flex-wrap: wrap;  
         }  
         .text {  
             flex: 1;  
@@ -67,19 +116,15 @@
             align-items: center;  
         }  
         .image img {  
-            max-width: 90%;  
+            max-width: 100%;  
             height: auto;  
             border-radius: 8px;  
         }  
-        h2 {  
-            font-size: 24px;  
+        h1, h2 {  
             color: #333;  
-            margin-bottom: 10px;  
         }  
-        h3 {  
-            color: #af4c86;  
-            font-size: 20px;  
-            margin-bottom: 10px;  
+        h1 {  
+            font-size: 24px;  
         }  
         p {  
             line-height: 1.6;  
@@ -90,43 +135,56 @@
             text-align: center;  
             padding: 20px 0;  
         }  
-        .vision {  
-            font-size: 20px;  
-            font-family: Arial, sans-serif;  
-        }  
-        .h1 {  
-            font-family: 'Baskerville', serif;  
-            font-weight: bold;  
-            font-size: 50px;  
-            margin: 0;  
-        }  
-        .h2 {  
-            font-family: Georgia, serif;  
-            font-size: 35px;  
-            margin: 0;  
+        @media (max-width: 768px) {  
+            header h1 {  
+                font-size: 30px;  
+            }  
+            header h2 {  
+                font-size: 25px;  
+            }  
+            .container {  
+                padding: 10px;  
+            }  
+            .problematicas, .solucion {  
+                flex-direction: column;  
+            }  
+            .text {  
+                margin-right: 0;  
+                text-align: center;  
+            }  
         }  
     </style>  
+    <script>  
+        // Script para mostrar/ocultar el menú en pantallas pequeñas  
+        function toggleMenu() {  
+            const menu = document.querySelector("nav ul");  
+            menu.classList.toggle("active");  
+        }  
+    </script>  
 </head>  
 <body>  
     <nav>  
-        <ul>  
-            <li><a href="index.html">Inicio</a></li>  
-            <li><a href="quienes-somos.html">Quiénes Somos</a></li>  
-            <li><a href="mision-vision.html">Misión y Visión</a></li>  
-            <li><a href="problematica-solucion.html">Problemáticas y Solución</a></li>
-            <li><a href="educate.html">Edúcate con Nosotros</a></li>  
-            <li><a href="contacto.html">Contacto</a></li>  
-        </ul>  
+        <div class="menu-container">  
+            <span class="menu-toggle" onclick="toggleMenu()">☰Menú</span>  
+            <ul>  
+                <li><a href="index.html">Inicio</a></li>  
+                <li><a href="quienes-somos.html">Quiénes Somos</a></li>  
+                <li><a href="mision-vision.html">Misión y Visión</a></li>  
+                <li><a href="problematica-solucion.html">Problemáticas y Solución</a></li>  
+                <li><a href="educate.html">Edúcate con Nosotros</a></li>  
+                <li><a href="contacto.html">Contacto</a></li>  
+            </ul>  
+        </div>  
     </nav>  
     <header>  
-        <h1 class="h1">Problemáticas y Solución</h1>  
-        <h2 class="h2">Preocúpate</h2>  
+        <h1>Problemáticas y Solución</h1>  
+        <h2>Preocúpate</h2>  
     </header>  
     <div class="container">  
         <div class="problematicas">  
             <div class="text">  
                 <h1>Problemáticas</h1>  
-                <p class="vision">  
+                <p>  
                     • El aumento progresivo de los casos de dengue dentro de nuestra región Piura.<br>  
                     • Uso de productos químicos como medidas de protección.<br>  
                     • Existente falta de educación sobre prevención, limitando la capacidad de la comunidad para protegerse eficazmente.  
@@ -142,7 +200,7 @@
             </div>  
             <div class="text">  
                 <h1>Solución</h1>  
-                <p class="vision">  
+                <p>  
                     Nuestro repelente 100% natural y de alta calidad contiene diversos beneficios para los consumidores.<br>  
                     BUG BLOOM es eficaz y terapéutico: Hecho con aceites esenciales y aromas inigualables, te brinda una experiencia placentera al momento de aplicarlo, además nutre tu piel de una manera indirecta pero muy efectiva.  
                 </p>  
